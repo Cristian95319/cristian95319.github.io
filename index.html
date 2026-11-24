@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matías Ferreira Olazar · Reporting Designer</title>
+<meta name="description" content="Diseño de informes anuales, memorias ESG, pitch decks y visualización de datos. Corporate reporting design: annual reports, ESG reports and data visualisation.">
+<meta property="og:title" content="Matías Ferreira Olazar · Reporting Designer">
+<meta property="og:description" content="Ayudando a las empresas a mostrar sus resultados con claridad, solidez y valor.">
+<meta property="og:image" content="img/cbre-cover.webp">
+<link rel="alternate" hreflang="es" href="./#es">
+<link rel="alternate" hreflang="en" href="./#en">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a5cff'/%3E%3Crect x='17' y='5' width='10' height='10' fill='%2300d6c9'/%3E%3Crect x='11' y='15' width='8' height='8' fill='%23fff'/%3E%3C/svg%3E">
+<!-- Fuentes de Adobe Fonts (Century Gothic + Eurostile Extended). Para usar tu proyecto "mfo web", cambia esta línea por su código de inserción. -->
+<link rel="stylesheet" href="https://use.typekit.net/glz7oer.css">
+<style>
+/* VOICE   reporting corporativo: preciso, luminoso, sereno
+   IDEA    la web es el propio deck: campo azul eléctrico, retícula de cruces de maquetación, cifras como barras
+   PICTURE tus mockups reales a sangre, con fichas de cristal (objetivo, reto, proceso) encima del azul
+   COLOUR  blanco, azul #0a5cff, azul profundo #0036c9, acento cian #00d6c9
+   TYPE    Century Gothic para titulares y texto, Eurostile Extended para etiquetas
+   LAYOUT  bandas a todo el ancho que alternan azul y blanco; en móvil una columna, imagen primero */
+:root{color-scheme:light;--blue:#0a5cff;--deep:#0036c9;--cyan:#00d6c9;--ink:#3c3f46;--mute:#7a808c;--line:#e3e8f3;--white:#fff;--grad:linear-gradient(150deg,#0036c9 0%,#0a5cff 45%,#3f8dff 78%,#a9ccff 100%);--g:"century-gothic","Century Gothic","Avenir Next","Futura",sans-serif;--e:"eurostile-extended","Eurostile Extended","Microgramma",var(--g)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:#fff;color:var(--ink);font:17px/1.5 var(--g);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-weight:400;line-height:1.04;letter-spacing:-.015em;margin:0;text-wrap:balance}
+h2{font-size:clamp(36px,5vw,64px);color:#4a4d55}
+h2 b,h1 b{font-weight:400;color:var(--blue)}
+p{margin:0}
+.lab{font:900 12px/1.2 var(--e);letter-spacing:.02em;text-transform:none}
+.band{padding:clamp(56px,7vw,110px) max(5vw,18px);position:relative}
+.wrap{max-width:1280px;margin-inline:auto;position:relative}
+.cross{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M32 25v14M25 32h14' stroke='%230a5cff' stroke-opacity='.28' stroke-width='1'/%3E%3C/svg%3E")}
+.blue{background:var(--grad);color:#fff}
+.blue.cross{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M32 25v14M25 32h14' stroke='%23fff' stroke-opacity='.25' stroke-width='1'/%3E%3C/svg%3E"),var(--grad)}
+.blue h2{color:#fff}
+.blue h2 b{color:#8ff0e8}
+.glass{background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);border:1px solid rgba(255,255,255,.38);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 24px 48px -28px rgba(0,30,120,.55)}
+/* header */
+header.bar{position:fixed;top:12px;left:0;right:0;z-index:20;display:flex;justify-content:center;padding:0 12px;pointer-events:none}
+.pill{pointer-events:auto;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 18px;border-radius:999px;color:#fff;max-width:100%}
+.pill.on{background:rgba(10,60,200,.55)}
+.brand{font:900 13px var(--e);text-decoration:none;margin-right:10px;white-space:nowrap}
+.brand span{color:var(--cyan)}
+.pill nav{display:flex;overflow-x:auto;scrollbar-width:none}
+.pill nav a{text-decoration:none;padding:11px 14px;border-radius:999px;font-size:15px;white-space:nowrap}
+.pill nav a:hover{background:rgba(255,255,255,.16)}
+.lang{display:flex;background:rgba(255,255,255,.18);border-radius:999px;padding:3px;margin-left:4px}
+.lang button{border:0;background:transparent;color:#fff;font:900 11px var(--e);min-width:44px;min-height:38px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed=true]{background:#fff;color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+/* hero */
+.hero{min-height:min(100svh,900px);display:grid;align-items:center;padding-top:120px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;width:100%}
+.hero h1{font-size:clamp(44px,6.6vw,92px);font-weight:400;line-height:1.02;color:rgba(255,255,255,.62)}
+.hero h1 b{color:#fff}
+.hero .sub{margin-top:28px;font-size:18px;max-width:40ch;color:rgba(255,255,255,.92)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:52px;padding:4px 4px 4px 22px;border-radius:999px;text-decoration:none;font-size:16px;border:1px solid rgba(255,255,255,.7);color:#fff;cursor:pointer;background:transparent;font-family:inherit}
+.btn i{font-style:normal;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--blue);transition:transform .25s}
+.btn:hover i{transform:rotate(-45deg)}
+.btn.w{background:#fff;color:var(--blue);border-color:#fff}
+.btn.w i{background:var(--blue);color:#fff}
+.btn.b{border-color:var(--blue);color:var(--blue)}
+.btn.b i{background:var(--blue);color:#fff}
+.portrait{position:relative;aspect-ratio:4/5;max-height:640px;justify-self:end;width:100%;max-width:470px}
+.portrait .bars{position:absolute;inset:0;display:flex;align-items:flex-end;gap:6%;padding:0 4%}
+.portrait .bars span{flex:1;background:linear-gradient(to top,rgba(255,255,255,.05),rgba(255,255,255,.55));border-top:3px solid var(--cyan);transform-origin:bottom;animation:grow 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes grow{from{transform:scaleY(0)}}
+.portrait img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:92%;width:auto;max-width:none;filter:drop-shadow(0 30px 40px rgba(0,20,90,.35))}
+.portrait .tag{position:absolute;left:-6%;bottom:10%;padding:16px 18px;border-radius:18px;max-width:230px}
+.portrait .tag b{display:block;font:900 12px var(--e);margin-bottom:4px}
+.portrait .tag span{font-size:14px;line-height:1.25;display:block}
+.sq{position:absolute;pointer-events:none}
+/* intro */
+.intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:end}
+.intro h2{font-size:clamp(30px,3.8vw,50px)}
+.intro p{font-size:19px;line-height:1.45;border-left:2px solid var(--blue);padding-left:22px}
+.intro p b{color:var(--blue);font-weight:400}
+/* impact */
+.impact{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.8fr) minmax(0,.8fr);gap:14px;align-items:end;margin-top:44px}
+.clients{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 18px;align-content:end;padding-bottom:18px}
+.clients span{font:900 13px var(--e);color:#9aa1ad;letter-spacing:.01em;text-align:center}
+.col{display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:linear-gradient(170deg,#0a5cff,#1388f2 70%,#19c2d9);padding:22px;position:relative;overflow:hidden}
+.col .num{font:900 clamp(56px,7vw,110px)/.9 var(--e);letter-spacing:-.03em;color:rgba(255,255,255,.95)}
+.col p{font-size:17px;line-height:1.25;max-width:20ch}
+.c1{height:clamp(300px,30vw,420px)}
+.c2{height:clamp(420px,44vw,600px)}
+.clientbox{grid-column:1;background:linear-gradient(170deg,#0a5cff,#19c2d9);color:#fff;padding:18px 22px;font-size:17px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:44px}
+.card{position:relative;min-height:clamp(420px,40vw,540px);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:#fff;isolation:isolate}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.05)}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(0,40,170,.55),rgba(0,40,170,0) 60%)}
+.card .n{position:absolute;top:6px;right:16px;font:900 clamp(100px,11vw,170px)/1 var(--e);color:rgba(255,255,255,.82);mix-blend-mode:overlay}
+.card .glass{border-radius:18px;padding:20px}
+.card h3{font:900 15px/1.25 var(--e);margin-bottom:10px}
+.card p{font-size:16px;line-height:1.3}
+/* projects */
+.proj{border-top:1px solid var(--line)}
+.proj.blue{border:0}
+.case{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px}
+.cover{position:relative;overflow:hidden;min-height:clamp(340px,42vw,620px);cursor:zoom-in;padding:0;border:0;background:#111;display:block;width:100%}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.cover:hover img{transform:scale(1.03)}
+.cover .lab{position:absolute;left:20px;top:20px;color:#fff;background:rgba(0,0,0,.25);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:8px 12px;border-radius:999px}
+.cover .cl{position:absolute;left:20px;bottom:18px;color:#fff;font-size:15px;background:rgba(0,0,0,.25);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:8px 14px;border-radius:999px}
+.cover .cl b{font:900 13px var(--e)}
+.info{background:var(--grad);color:#fff;padding:clamp(20px,2.6vw,34px);display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.info::after{content:"";position:absolute;right:-30%;bottom:-30%;width:90%;height:70%;background:radial-gradient(closest-side,rgba(255,255,255,.55),rgba(255,255,255,0));pointer-events:none}
+.info .glass{border-radius:18px;padding:18px 20px;position:relative;z-index:1}
+.info h3{font:900 12px var(--e);color:var(--cyan);margin-bottom:8px;filter:brightness(1.4)}
+.info .obj{font-size:clamp(20px,1.9vw,26px);line-height:1.2}
+.info p{font-size:16px;line-height:1.4}
+.phead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px;margin-bottom:22px}
+.phead .k{font:900 13px var(--e);color:var(--blue)}
+.phead h2{margin-top:8px}
+.phead .idx{font:900 clamp(40px,5vw,72px)/1 var(--e);color:var(--line)}
+.gal{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:14px;margin-top:14px}
+.gal button{padding:0;border:0;background:#eee;cursor:zoom-in;aspect-ratio:4/3;overflow:hidden}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gal button:hover img{transform:scale(1.04)}
+/* close */
+.closing{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:end;min-height:620px;overflow:hidden}
+.closing .me{position:relative;align-self:stretch;min-height:420px}
+.closing .me img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%;opacity:.7;mix-blend-mode:luminosity}
+.closing .me{border-radius:4px;overflow:hidden;background:#0036c9}
+.closing .formula{font-size:15px;opacity:.75;margin-bottom:18px}
+.closing h2{font-size:clamp(44px,6vw,86px)}
+.contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:34px;max-width:720px}
+.contact a{display:block;border-radius:20px;padding:20px 22px;text-decoration:none}
+.contact .lab{display:block;margin-bottom:8px;opacity:.85}
+.contact strong{font-weight:400;font-size:clamp(18px,1.8vw,24px);overflow-wrap:anywhere}
+.contact a:hover{background:rgba(255,255,255,.26)}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:22px max(5vw,18px);font-size:13px;color:var(--mute)}
+footer .lab{color:var(--blue)}
+/* lightbox */
+dialog{padding:0;border:0;background:transparent;max-width:min(1400px,96vw);max-height:94vh;overflow:visible}
+dialog::backdrop{background:rgba(0,24,90,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+dialog img{max-width:min(1400px,96vw);max-height:86vh;width:auto;height:auto;margin:auto}
+.lbbar{display:flex;justify-content:center;gap:10px;margin-top:12px}
+.lbbar button{width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:var(--blue);font-size:20px;cursor:pointer}
+@media(max-width:980px){.hero .wrap,.intro,.closing{grid-template-columns:1fr}.portrait{justify-self:center;max-width:380px}.impact{grid-template-columns:1fr 1fr}.impact>div:first-child{grid-column:1/-1}.sq{width:110px!important;height:110px!important;top:auto!important;bottom:4%;right:4%!important;opacity:.8}.c1,.c2{height:320px}.svc{grid-template-columns:1fr}.card{min-height:380px}.case{grid-template-columns:1fr}.closing .me{min-height:300px;order:2}}
+@media(max-width:640px){.sq{display:none}.phead .idx{display:none}.col .num{font-size:52px}.brand{display:none}.pill{padding-left:6px}.pill nav a{padding:10px 9px;font-size:14px}.hero{padding-top:96px}.portrait .tag{left:0}.clients{grid-template-columns:repeat(2,minmax(0,1fr))}.gal{grid-template-columns:1fr 1fr}.gal button:last-child:nth-child(odd){grid-column:span 2;aspect-ratio:16/9}.contact{grid-template-columns:1fr}.cover{min-height:300px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="pill glass" id="pill">
+  <a class="brand" href="#top">C. MATÍAS <span>F.O.</span></a>
+  <nav aria-label="Menu"><a href="#servicios" data-t="nav1"></a><a href="#proyectos" data-t="nav2"></a><a href="#cifras" data-t="nav3"></a><a href="#contacto" data-t="nav4"></a></nav>
+  <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="es">ES</button><button type="button" data-l="en">EN</button></div>
+</div></header>
+
+<section class="band blue cross hero" id="top">
+  <svg class="sq" aria-hidden="true" style="right:6%;top:14%;width:180px;height:180px" viewBox="0 0 180 180"><rect x="90" y="0" width="90" height="90" fill="#00d6c9" opacity=".9"/><rect x="40" y="90" width="50" height="50" fill="#fff"/><rect x="0" y="140" width="40" height="40" fill="#0036c9"/></svg>
+  <div class="wrap">
+    <div>
+      <h1 data-th="h1"></h1>
+      <p class="sub" data-t="sub"></p>
+      <div class="cta"><a class="btn w" href="#proyectos"><span data-t="cta1"></span><i>↓</i></a><a class="btn" href="#contacto"><span data-t="cta2"></span><i>→</i></a></div>
+    </div>
+    <div class="portrait">
+      <div class="bars" aria-hidden="true"><span style="height:38%;animation-delay:.05s"></span><span style="height:62%;animation-delay:.12s"></span><span style="height:48%;animation-delay:.19s"></span><span style="height:78%;animation-delay:.26s"></span><span style="height:92%;animation-delay:.33s"></span></div>
+      <img src="img/yo.webp" alt="Matías Ferreira Olazar" width="651" height="977">
+      <div class="tag glass"><b>Reporting Designer</b><span data-t="tag"></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band cross">
+  <div class="wrap intro">
+    <h2 data-th="introH"></h2>
+    <p data-th="introP"></p>
+  </div>
+</section>
+
+<section class="band" id="cifras" style="padding-top:20px">
+  <div class="wrap">
+    <h2 data-th="impH"></h2>
+    <div class="impact">
+      <div>
+        <div class="clients" aria-label="Clients"><span>EY</span><span>accenture</span><span>pwc</span><span>BID</span><span>BBVA</span><span>Santander</span><span>Eversheds Sutherland</span><span>mazars</span><span>FTI Consulting</span><span>ferrovial</span><span>Santa Cruz</span><span>Microsoft</span><span>Philip Morris Spain</span><span>CBRE</span></div>
+        <div class="clientbox" data-t="imp0"></div>
+      </div>
+      <div class="col c1"><div class="num">+10</div><p data-t="imp1"></p></div>
+      <div class="col c2"><div class="num">+150</div><p data-t="imp2"></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band blue cross" id="servicios">
+  <div class="wrap">
+    <h2 data-th="svcH"></h2>
+    <div class="svc">
+      <article class="card"><img src="img/svc-1.webp" alt="" loading="lazy"><span class="n" aria-hidden="true">1</span><div class="glass"><h3 data-t="s1t"></h3><p data-t="s1d"></p></div></article>
+      <article class="card"><img src="img/svc-2.webp" alt="" loading="lazy"><span class="n" aria-hidden="true">2</span><div class="glass"><h3 data-t="s2t"></h3><p data-t="s2d"></p></div></article>
+      <article class="card"><img src="img/svc-3.webp" alt="" loading="lazy"><span class="n" aria-hidden="true">3</span><div class="glass"><h3 data-t="s3t"></h3><p data-t="s3d"></p></div></article>
+    </div>
+  </div>
+</section>
+
+<div id="proyectos"></div>
+
+<section class="band blue cross" id="contacto">
+  <div class="wrap closing">
+    <div class="me" aria-hidden="true"><img src="img/cierre.webp" alt="" loading="lazy"></div>
+    <div>
+      <p class="formula" data-t="formula"></p>
+      <h2 data-th="closeH"></h2>
+      <div class="contact">
+        <a class="glass" href="mailto:mfo.gds@gmail.com"><span class="lab">Email</span><strong>mfo.gds@gmail.com</strong></a>
+        <a class="glass" href="https://wa.me/34662357233"><span class="lab">WhatsApp</span><strong>+34 662 357 233</strong></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><span><span class="lab">C. Matías Ferreira Olazar</span> · Portfolio · Reporting Designer</span><span>Madrid · Bogotá</span><span>© 2026</span></footer>
+
+<dialog id="lb" aria-label="Imagen ampliada"><img id="lbimg" alt=""><div class="lbbar"><button type="button" id="lbp" aria-label="Anterior">←</button><button type="button" id="lbx" aria-label="Cerrar">×</button><button type="button" id="lbn" aria-label="Siguiente">→</button></div></dialog>
+
+<script>
+{
+const T={
+es:{nav1:"Servicios",nav2:"Proyectos",nav3:"Cifras",nav4:"Contacto",
+ h1:"Ayudando a las empresas a mostrar sus resultados con <b>claridad, solidez y valor.</b>",
+ sub:"Especialista en reporting corporativo: informes anuales, memorias ESG, pitch decks y visualización de datos.",
+ cta1:"Ver proyectos",cta2:"Hablemos",tag:"+10 años diseñando para firmas globales",
+ introH:"Los documentos que comunican los resultados de una empresa no deberían ser solo un trámite, sino una oportunidad para <b>reforzar su credibilidad y hacer visible su valor.</b>",
+ introP:"Como <b>especialista en reporting corporativo</b>, transformo información financiera, corporativa y de sostenibilidad en piezas visuales claras, precisas y persuasivas.",
+ impH:"Mi <b>impacto</b> en cifras",imp0:"Colaboración con firmas globales.",imp1:"Años de experiencia en artes gráficas, diseño editorial y diseño gráfico.",imp2:"Proyectos corporativos entregados en 7 años.",
+ svcH:"Lo que hago para tu <b>empresa</b>",
+ s1t:"Informes Anuales y Memorias ESG",s1d:"Claridad visual y ejecución profesional que transmiten transparencia y solidez.",
+ s2t:"Pitch Decks y Dossiers de Venta",s2d:"Diseños pensados para captar la atención y mostrar tu trabajo con claridad, valor e impacto.",
+ s3t:"Visualización de Datos",s3d:"Transformo datos complejos en infografías dinámicas, claras y fáciles de entender.",
+ client:"Cliente",obj:"Objetivo",ch:"Reto",pr:"Proceso",
+ formula:"claridad + resultados + valor = confianza",closeH:"Haz que tus resultados <b style=\"color:#fff\">se vean.</b>",
+ title:"Matías Ferreira Olazar · Diseñador de reporting corporativo"},
+en:{nav1:"Services",nav2:"Projects",nav3:"Numbers",nav4:"Contact",
+ h1:"Helping companies show their results with <b>clarity, strength and value.</b>",
+ sub:"Corporate reporting specialist: annual reports, ESG reports, pitch decks and data visualisation.",
+ cta1:"See projects",cta2:"Let’s talk",tag:"10+ years designing for global firms",
+ introH:"The documents that communicate a company’s results shouldn’t be just a formality, they’re an opportunity to <b>reinforce credibility and make their value visible.</b>",
+ introP:"As a <b>corporate reporting specialist</b>, I transform financial, corporate and sustainability information into visual pieces that are clear, precise and persuasive.",
+ impH:"My <b>impact</b> in numbers",imp0:"Collaboration with global firms.",imp1:"Years of experience in graphic arts, editorial design and graphic design.",imp2:"Corporate projects delivered in 7 years.",
+ svcH:"What I do for your <b>company</b>",
+ s1t:"Annual Reports & ESG Reports",s1d:"Visual clarity and professional execution that convey transparency and strength.",
+ s2t:"Pitch Decks & Sales Dossiers",s2d:"Designs built to capture attention and showcase your work with clarity, value and impact.",
+ s3t:"Data Visualisation",s3d:"I turn complex data into dynamic, clear and easy-to-read infographics.",
+ client:"Client",obj:"Objective",ch:"Challenge",pr:"Process",
+ formula:"clarity + results + value = trust",closeH:"Make your results <b style=\"color:#fff\">visible.</b>",
+ title:"Matías Ferreira Olazar · Corporate Reporting Designer"}};
+const P=[
+ {id:"cbre",client:"CBRE",name:{es:"Residencial Prime",en:"Residencial Prime"},
+  obj:{es:"Crear un informe de mercado residencial premium que posicionara a CBRE como referente en el segmento de lujo ante inversores y clientes institucionales.",en:"Create a premium residential market report positioning CBRE as a benchmark in the luxury segment for investors and institutional clients."},
+  ch:{es:"Traducir datos complejos del mercado inmobiliario en un documento visualmente atractivo sin perder rigor analítico, manteniendo el tono aspiracional que requiere el segmento prime.",en:"Translating complex real estate market data into a visually compelling document without losing analytical rigor, while maintaining the aspirational tone the prime segment demands."},
+  pr:{es:"Sistema visual basado en espacio en blanco generoso, tipografía elegante y una paleta neutra con acentos en dorado. Cada dato se trató como una pieza gráfica en sí misma, priorizando legibilidad e impacto visual.",en:"Visual system built around generous white space, editorial typography, and a neutral palette with gold accents. Each data point was treated as an independent graphic element to maximize readability and visual impact."}},
+ {id:"ey",client:"Ernst & Young",name:{es:"Capital privado en la salud",en:"Private Capital in Healthcare"},
+  obj:{es:"Diseñar un informe de análisis sectorial para Ernst & Young dirigido a inversores de capital privado interesados en el sector sanitario.",en:"Design a sector analysis report for Ernst & Young aimed at private equity investors focused on the healthcare industry."},
+  ch:{es:"El documento combinaba datos financieros densos, análisis cualitativos y múltiples niveles de información. El reto fue crear una jerarquía visual clara que guiara al lector sin simplificar el contenido.",en:"The document combined dense financial data, qualitative analysis, and multiple layers of information. The challenge was creating a clear visual hierarchy that guided the reader without oversimplifying the content."},
+  pr:{es:"Estructura modular con un sistema de secciones codificadas por color para facilitar la navegación. Los datos cuantitativos se transformaron en visualizaciones a medida respetando estrictamente las guías de marca de EY.",en:"Modular structure with a color-coded section system for easy navigation. Quantitative data was transformed into custom visualizations while strictly adhering to EY brand guidelines."}},
+ {id:"moeve",client:"Moeve",name:{es:"Moléculas verdes",en:"Green Molecules"},
+  obj:{es:"Desarrollar el reporte de sostenibilidad de Moeve (antes Cepsa) comunicando su transición energética hacia combustibles renovables de forma clara y con alto impacto visual.",en:"Develop Moeve’s (formerly Cepsa) sustainability report communicating its energy transition toward renewable fuels with clarity and high visual impact."},
+  ch:{es:"Equilibrar el rigor técnico propio de un informe EINF con una narrativa visual que transmitiera ambición y transformación. El volumen de contenido era considerable con plazos ajustados.",en:"Balancing the technical rigor of an EINF report with a visual narrative that conveyed ambition and transformation, across a high volume of content under tight deadlines."},
+  pr:{es:"Concepto visual basado en la idea de transformación orgánica. Sistema de infografías propio para los KPIs ASG y diagramas de doble materialidad. Coordinación de versiones print y digital simultáneas.",en:"Visual concept rooted in the idea of organic transformation. Custom infographic system for ESG KPIs and double materiality diagrams. Simultaneous coordination of print and digital versions."}},
+ {id:"ctg",client:"China Three Gorges Europe",g:["1","2","3","4"],name:{es:"Sustainability Report",en:"Sustainability Report"},
+  obj:{es:"Diseñar el primer informe de sostenibilidad europeo de China Three Gorges, adaptando los estándares de reporte global al contexto europeo y a la identidad de una empresa en expansión internacional.",en:"Design China Three Gorges’ first European sustainability report, adapting global reporting standards to the European context and the identity of a company in international expansion."},
+  ch:{es:"Trabajar con una empresa de origen chino con presencia en mercados europeos implicaba resolver tensiones entre su identidad corporativa global y las expectativas visuales del mercado occidental.",en:"Working with a Chinese company operating in European markets required resolving tensions between its global corporate identity and the visual expectations of Western audiences."},
+  pr:{es:"Desarrollo de un lenguaje visual que integrara ambas identidades sin fricciones. Sistema de iconografía propio, paleta adaptada y estructura narrativa que priorizaba los logros en energía renovable como eje central del documento.",en:"Development of a visual language that integrated both identities without friction. Custom iconography system, adapted palette, and a narrative structure centered on renewable energy achievements as the document’s core axis."}}
+];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const box=document.getElementById("proyectos");
+let gallery=[],cur=0;
+function renderProjects(l){
+ const t=T[l];gallery=[];
+ box.innerHTML=P.map((p,i)=>{
+  const imgs=["cover",...(p.g||["1","2","3"])].map(k=>`img/${p.id}-${k}.webp`);
+  const base=gallery.length;gallery.push(...imgs);
+  const alt=`${esc(p.name[l])} · ${esc(p.client)}`;
+  return `<section class="band proj ${i%2?"cross":""}" aria-labelledby="h-${p.id}"><div class="wrap">
+   <div class="phead"><div><span class="k">${t.client}: ${esc(p.client)}</span><h2 id="h-${p.id}">${esc(p.name[l])}</h2></div><span class="idx" aria-hidden="true">0${i+1}</span></div>
+   <div class="case">
+    <button class="cover" type="button" data-g="${base}"><img src="${imgs[0]}" alt="${alt}" loading="lazy"><span class="lab">${esc(p.name[l])}</span><span class="cl">${t.client}: <b>${esc(p.client)}</b></span></button>
+    <div class="info"><div class="glass"><h3>${t.obj}</h3><p class="obj">${esc(p.obj[l])}</p></div><div class="glass"><h3>${t.ch}</h3><p>${esc(p.ch[l])}</p></div><div class="glass"><h3>${t.pr}</h3><p>${esc(p.pr[l])}</p></div></div>
+   </div>
+   <div class="gal" style="--n:${imgs.length-1}">${imgs.slice(1).map((s,j)=>`<button type="button" data-g="${base+j+1}"><img src="${s}" alt="${alt} ${j+1}" loading="lazy"></button>`).join("")}</div>
+  </div></section>`}).join("");
+}
+function setLang(l){
+ if(!T[l])l="es";
+ const t=T[l];document.documentElement.lang=l;document.title=t.title;
+ document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t[e.dataset.t]);
+ document.querySelectorAll("[data-th]").forEach(e=>e.innerHTML=t[e.dataset.th]);
+ document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l==l));
+ renderProjects(l);
+ try{localStorage.setItem("lang",l)}catch(e){}
+ if(location.hash!=="#"+l&&(location.hash===""||location.hash==="#es"||location.hash==="#en"))history.replaceState(null,"","#"+l);
+}
+let start="es",saved=null;
+try{saved=localStorage.getItem("lang")}catch(e){}
+if(saved)start=saved;else if(/^en/i.test(navigator.language||""))start="en";
+if(location.hash==="#en"||location.hash==="#es")start=location.hash.slice(1);
+setLang(start);
+document.querySelector(".lang").addEventListener("click",e=>{const b=e.target.closest("button");if(b)setLang(b.dataset.l)});
+/* header en scroll */
+const pill=document.getElementById("pill");
+const onScroll=()=>pill.classList.toggle("on",scrollY>window.innerHeight*.6);
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+/* lightbox */
+const lb=document.getElementById("lb"),lbimg=document.getElementById("lbimg");
+const show=i=>{cur=(i+gallery.length)%gallery.length;lbimg.src=gallery[cur]};
+box.addEventListener("click",e=>{const b=e.target.closest("[data-g]");if(!b)return;show(+b.dataset.g);lb.showModal?lb.showModal():lb.setAttribute("open","")});
+document.getElementById("lbp").addEventListener("click",()=>show(cur-1));
+document.getElementById("lbn").addEventListener("click",()=>show(cur+1));
+document.getElementById("lbx").addEventListener("click",()=>lb.close());
+lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
+lb.addEventListener("keydown",e=>{if(e.key==="ArrowRight")show(cur+1);if(e.key==="ArrowLeft")show(cur-1)});
+}
+</script>
+</body>
+</html>
