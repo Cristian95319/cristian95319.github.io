@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matías Ferreira Olazar · Reporting Designer</title>
+<meta name="description" content="Diseño de informes anuales, memorias ESG, pitch decks y visualización de datos. Corporate reporting design: annual reports, ESG reports and data visualisation.">
+<meta property="og:title" content="Matías Ferreira Olazar · Reporting Designer">
+<meta property="og:description" content="Ayudando a las empresas a mostrar sus resultados con claridad, solidez y valor.">
+<meta property="og:image" content="img/cbre-cover.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a5cff'/%3E%3Crect x='17' y='5' width='10' height='10' fill='%2300d6c9'/%3E%3Crect x='11' y='15' width='8' height='8' fill='%23fff'/%3E%3C/svg%3E">
+<!-- Adobe Fonts (Century Gothic + Eurostile Extended). Para usar tu proyecto "mfo web", cambia esta línea por su código de inserción, aquí y en las páginas de proyectos/. -->
+<link rel="stylesheet" href="https://use.typekit.net/glz7oer.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="bar"><div class="pill glass" id="pill">
+  <a class="brand" href="#top">C. MATÍAS <span>F.O.</span></a>
+  <nav aria-label="Menu"><a href="#servicios" data-t="nav1"></a><a href="#proyectos" data-t="nav2"></a><a href="#clientes" data-t="nav3"></a><a href="#contacto" data-t="nav4"></a></nav>
+  <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="es">ES</button><button type="button" data-l="en">EN</button></div>
+</div></header>
+
+<section class="band blue hero" id="top">
+  <svg class="sq" aria-hidden="true" style="right:6%;top:14%;width:180px;height:180px" viewBox="0 0 180 180"><rect x="90" y="0" width="90" height="90" fill="#00d6c9" opacity=".9"/><rect x="40" y="90" width="50" height="50" fill="#fff"/><rect x="0" y="140" width="40" height="40" fill="#0036c9"/></svg>
+  <div class="wrap">
+    <div>
+      <h1 data-th="h1"></h1>
+      <p class="sub" data-t="sub"></p>
+      <div class="cta"><a class="btn w" href="#proyectos"><span data-t="cta1"></span><i>↓</i></a><a class="btn" href="#contacto"><span data-t="cta2"></span><i>→</i></a></div>
+    </div>
+    <div class="portrait">
+      <div class="bars" aria-hidden="true"><span style="height:38%;animation-delay:.05s"></span><span style="height:62%;animation-delay:.12s"></span><span style="height:48%;animation-delay:.19s"></span><span style="height:78%;animation-delay:.26s"></span><span style="height:92%;animation-delay:.33s"></span></div>
+      <img src="img/yo.webp" alt="Matías Ferreira Olazar" width="651" height="977">
+      <div class="tag glass"><b>Reporting Designer</b><span data-t="tag"></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap intro">
+    <h2 data-th="introH"></h2>
+    <p data-th="introP"></p>
+  </div>
+</section>
+
+<section class="band" id="proyectos" style="padding-top:0">
+  <div class="wrap">
+    <div class="phead"><h2 data-th="projH"></h2><p data-t="projP"></p></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="logos" id="clientes" aria-labelledby="clh">
+  <p class="lab" id="clh" data-t="clientsH"></p>
+  <div class="marquee"><div class="track" id="track"></div></div>
+</section>
+
+<section class="band blue" id="servicios">
+  <div class="wrap">
+    <h2 data-th="svcH"></h2>
+    <div class="svc">
+      <article class="card"><img src="img/svc-1.webp" alt="" loading="lazy"><span class="n" aria-hidden="true">1</span><div class="glass"><h3 data-t="s1t"></h3><p data-t="s1d"></p></div></article>
+      <article class="card"><img src="img/svc-2.webp" alt="" loading="lazy"><span class="n" aria-hidden="true">2</span><div class="glass"><h3 data-t="s2t"></h3><p data-t="s2d"></p></div></article>
+      <article class="card"><img src="img/svc-3.webp" alt="" loading="lazy"><span class="n" aria-hidden="true">3</span><div class="glass"><h3 data-t="s3t"></h3><p data-t="s3d"></p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band blue" id="contacto" style="background:linear-gradient(200deg,#0036c9,#0a5cff 55%,#3f8dff)">
+  <div class="wrap closing">
+    <div class="me" aria-hidden="true"><img src="img/cierre.webp" alt="" loading="lazy"></div>
+    <div>
+      <p class="formula" data-t="formula"></p>
+      <h2 data-th="closeH"></h2>
+      <div class="contact">
+        <a class="glass" href="mailto:mfo.gds@gmail.com"><span class="lab">Email</span><strong>mfo.gds@gmail.com</strong></a>
+        <a class="glass" href="https://wa.me/34662357233"><span class="lab">WhatsApp</span><strong>+34 662 357 233</strong></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><span><span class="lab">C. Matías Ferreira Olazar</span> · Portfolio · Reporting Designer</span><span>Madrid · Bogotá</span><span>© 2026</span></footer>
+
+<script src="data.js"></script>
+<script>
+{
+const g=document.getElementById("grid");
+const C=["EY","Accenture","PwC","BID","BBVA","Santander","Eversheds Sutherland","Mazars","FTI Consulting","Ferrovial","Santa Cruz de Tenerife","Microsoft","Philip Morris Spain","CBRE","Moeve","China Three Gorges"];
+const row=C.map(c=>`<span>${c}</span>`).join("");
+document.getElementById("track").innerHTML=`<div>${row}</div><div aria-hidden="true">${row}</div>`;
+SITE.onLang((l,t)=>{
+ g.innerHTML=P.map((p,i)=>`<a class="tile" data-page="proyectos/${p.id}.html" href="proyectos/${p.id}.html#${l}"><img src="img/${p.id}-cover.webp" alt="${SITE.esc(p.name[l])} · ${SITE.esc(p.client)}" loading="lazy"><span class="num">0${i+1}</span><span class="meta glass"><span><span>${t.client}: ${SITE.esc(p.client)}</span><strong>${SITE.esc(p.name[l])}</strong></span><i>→</i></span></a>`).join("");
+ document.title=t.title;
+});
+SITE.init();
+}
+</script>
+</body>
+</html>
